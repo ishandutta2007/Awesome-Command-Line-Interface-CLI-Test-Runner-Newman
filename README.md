@@ -66,7 +66,7 @@ The table below lists leading commercial/hosted platforms offering dedicated CLI
 
 A comprehensive index of open-source CLI test runners, HTTP assertion tools, and load testing utilities, strictly sorted in descending order by GitHub stargazer count.
 
-| Project | Stars | Language | Primary Focus | Description |
+| Project | GitHub_Stars | Language | Primary Focus | Description |
 |---|:---:|---|---|---|
 | **[Playwright](https://github.com/microsoft/playwright)** | [![Stars](https://img.shields.io/github/stars/microsoft/playwright?style=social&color=white)](https://github.com/microsoft/playwright/stargazers) | TypeScript / C++ / Python | E2E Browser & API Testing | Microsoft's modern automation library and CLI runner for Chromium, Firefox, and WebKit with native API request testing, sharding, and trace viewing. |
 | **[Cypress](https://github.com/cypress-io/cypress)** | [![Stars](https://img.shields.io/github/stars/cypress-io/cypress?style=social&color=white)](https://github.com/cypress-io/cypress/stargazers) | JavaScript / TypeScript | E2E Web & Component Testing | Fast, easy, and reliable headless browser testing CLI for anything that runs in a browser. Built with automatic waiting, network stubbing, and time-travel snapshots. |
