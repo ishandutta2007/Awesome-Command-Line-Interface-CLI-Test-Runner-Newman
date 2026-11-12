@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#070a12"/>
+    </linearGradient>
+
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+
+    <linearGradient id="accentGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Glowing Orbs Filters -->
+    <filter id="blurGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="60" result="blur"/>
+    </filter>
+
+    <filter id="badgeShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+
+    <!-- Grid Pattern -->
+    <pattern id="bannerGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#334155" stroke-width="0.75" stroke-opacity="0.3"/>
+    </pattern>
+  </defs>
+
+  <style>
+    @keyframes pulseOrb1 {
+      0%, 100% { transform: translate(0px, 0px) scale(1); opacity: 0.4; }
+      50% { transform: translate(60px, 30px) scale(1.15); opacity: 0.65; }
+    }
+    @keyframes pulseOrb2 {
+      0%, 100% { transform: translate(0px, 0px) scale(1); opacity: 0.35; }
+      50% { transform: translate(-50px, -25px) scale(1.2); opacity: 0.6; }
+    }
+    @keyframes beamFlow {
+      0% { stroke-dashoffset: 600; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @keyframes cursorBlink {
+      0%, 49% { opacity: 1; }
+      50%, 100% { opacity: 0; }
+    }
+    .orb-1 { animation: pulseOrb1 9s ease-in-out infinite; transform-origin: 200px 100px; }
+    .orb-2 { animation: pulseOrb2 11s ease-in-out infinite; transform-origin: 1000px 300px; }
+    .stream-beam {
+      stroke-dasharray: 120 480;
+      animation: beamFlow 6s linear infinite;
+    }
+    .cursor { animation: cursorBlink 1s infinite; }
+  </style>
+
+  <!-- Base Canvas -->
+  <rect width="1200" height="420" rx="16" fill="url(#bgGrad)"/>
+
+  <!-- Subtle Blueprint Grid -->
+  <rect width="1200" height="420" rx="16" fill="url(#bannerGrid)"/>
+
+  <!-- Dynamic Animated Background Orbs -->
+  <g filter="url(#blurGlow)">
+    <circle class="orb-1" cx="220" cy="120" r="160" fill="#0284c7"/>
+    <circle class="orb-2" cx="980" cy="280" r="180" fill="#7c3aed"/>
+    <circle cx="600" cy="210" r="130" fill="#ec4899" opacity="0.18"/>
+  </g>
+
+  <!-- Ambient Dynamic Circuit Paths in Background -->
+  <g fill="none" opacity="0.45">
+    <path d="M 0 150 Q 300 80 600 150 T 1200 120" stroke="#0284c7" stroke-width="1.5" stroke-opacity="0.3"/>
+    <path d="M 0 150 Q 300 80 600 150 T 1200 120" stroke="#38bdf8" stroke-width="2.5" class="stream-beam"/>
+
+    <path d="M 0 290 Q 400 360 800 280 T 1200 310" stroke="#7c3aed" stroke-width="1.5" stroke-opacity="0.3"/>
+    <path d="M 0 290 Q 400 360 800 280 T 1200 310" stroke="#c084fc" stroke-width="2.5" class="stream-beam" style="animation-duration: 8s; animation-direction: reverse;"/>
+  </g>
+
+  <!-- Foreground Content Container -->
+  <!-- Top Pill / Terminal Tag -->
+  <g transform="translate(600, 56)">
+    <rect x="-170" y="0" width="340" height="34" rx="17" fill="#1e293b" stroke="#334155" stroke-width="1.2" filter="url(#badgeShadow)"/>
+    <circle cx="-145" cy="17" r="5" fill="#10b981"/>
+    <text x="-130" y="22" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" letter-spacing="1.5">TEST-RUNNER // CI-CD SUITE</text>
+  </g>
+
+  <!-- Main Hero Title -->
+  <text x="600" y="145" text-anchor="middle" fill="url(#titleGrad)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="44" font-weight="800" letter-spacing="-0.5">
+    CLI Test Runner &amp; Newman
+  </text>
+
+  <!-- Subtitle -->
+  <text x="600" y="188" text-anchor="middle" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="20" font-weight="500" letter-spacing="0.2">
+    Curated Collection of CLI Automated API Testing, Load Testing &amp; CI/CD Runners
+  </text>
+
+  <!-- Terminal Command Simulation Box -->
+  <g transform="translate(330, 222)">
+    <rect width="540" height="48" rx="10" fill="#0b1120" stroke="#1e293b" stroke-width="1.5" filter="url(#badgeShadow)"/>
+    <!-- Terminal Dots -->
+    <circle cx="22" cy="24" r="5" fill="#ef4444"/>
+    <circle cx="38" cy="24" r="5" fill="#f59e0b"/>
+    <circle cx="54" cy="24" r="5" fill="#10b981"/>
+    <!-- Command Line Text -->
+    <text x="76" y="29" fill="#38bdf8" font-family="'Fira Code', 'Cascadia Code', Consolas, monospace" font-size="14" font-weight="600">$</text>
+    <text x="94" y="29" fill="#e2e8f0" font-family="'Fira Code', 'Cascadia Code', Consolas, monospace" font-size="14" font-weight="500">newman run collection.json --reporters cli,htmlextra</text>
+    <rect class="cursor" x="515" y="16" width="8" height="17" fill="#38bdf8"/>
+  </g>
+
+  <!-- Technology Badges Row -->
+  <g transform="translate(600, 325)">
+    <!-- Pill 1: Newman -->
+    <g transform="translate(-360, 0)">
+      <rect x="0" y="0" width="130" height="38" rx="19" fill="#1e293b" stroke="#f97316" stroke-width="1.2" opacity="0.9"/>
+      <text x="65" y="24" text-anchor="middle" fill="#ffedd5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="600">⚡ Newman</text>
+    </g>
+
+    <!-- Pill 2: k6 Load -->
+    <g transform="translate(-215, 0)">
+      <rect x="0" y="0" width="115" height="38" rx="19" fill="#1e293b" stroke="#a855f7" stroke-width="1.2" opacity="0.9"/>
+      <text x="57" y="24" text-anchor="middle" fill="#f3e8ff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="600">🚀 k6 Load</text>
+    </g>
+
+    <!-- Pill 3: Playwright -->
+    <g transform="translate(-85, 0)">
+      <rect x="0" y="0" width="135" height="38" rx="19" fill="#1e293b" stroke="#22c55e" stroke-width="1.2" opacity="0.9"/>
+      <text x="67" y="24" text-anchor="middle" fill="#dcfce7" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="600">🎭 Playwright</text>
+    </g>
+
+    <!-- Pill 4: Hurl -->
+    <g transform="translate(65, 0)">
+      <rect x="0" y="0" width="110" height="38" rx="19" fill="#1e293b" stroke="#ec4899" stroke-width="1.2" opacity="0.9"/>
+      <text x="55" y="24" text-anchor="middle" fill="#fce7f3" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="600">🦀 Hurl DSL</text>
+    </g>
+
+    <!-- Pill 5: Cypress -->
+    <g transform="translate(190, 0)">
+      <rect x="0" y="0" width="125" height="38" rx="19" fill="#1e293b" stroke="#06b6d4" stroke-width="1.2" opacity="0.9"/>
+      <text x="62" y="24" text-anchor="middle" fill="#cffafe" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="600">🌲 Cypress</text>
+    </g>
+  </g>
+
+  <!-- Footer Tagline -->
+  <text x="600" y="392" text-anchor="middle" fill="#64748b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500" letter-spacing="1">
+    AUTOMATED REST API TESTING • DISTRIBUTED LOAD GENERATION • CI/CD HEADLESS EXECUTION
+  </text>
+</svg>
