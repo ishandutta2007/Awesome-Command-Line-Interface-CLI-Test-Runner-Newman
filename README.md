@@ -32,7 +32,7 @@ Contributions welcome! Open an PR to add/update entries. Keep descriptions factu
 
 ## Open-Source GitHub Projects
 
-| Project | Star Badge | Description |
+| Project | Stars_Badge | Description |
 |---------|------------|-------------|
 | **[Newman](https://github.com/postmanlabs/newman)** | [![Stars](https://img.shields.io/github/stars/postmanlabs/newman?style=social&color=white)](https://github.com/postmanlabs/newman/stargazers) | Command-line collection runner for Postman (Apache-2.0, ~7k stars). Runs Postman collections from the CLI for automated API testing in CI/CD pipelines. The reference implementation for Postman-based CLI testing [citation:2][citation:12]. |
 | **[Hurl](https://github.com/Orange-OpenSource/hurl)** | [![Stars](https://img.shields.io/github/stars/Orange-OpenSource/hurl?style=social&color=white)](https://github.com/Orange-OpenSource/hurl/stargazers) | Run and test HTTP requests with plain text (Apache-2.0, ~10.7k stars). Lightweight Rust binary powered by curl. Supports JSONPath, XPath, response assertions, performance testing, and CI integration. Single binary with no runtime required [citation:9][citation:23]. |
@@ -42,7 +42,7 @@ Contributions welcome! Open an PR to add/update entries. Keep descriptions factu
 
 ### Additional Strong Open-Source Options
 
-| Project | Star Badge | Description |
+| Project | Stars_Badge | Description |
 |---------|------------|-------------|
 | **[Cypress](https://github.com/cypress-io/cypress)** | [![Stars](https://img.shields.io/github/stars/cypress-io/cypress?style=social&color=white)](https://github.com/cypress-io/cypress/stargazers) | Open-source (MIT) E2E testing framework with CLI. Time-travel debugging, automatic waiting, and network stubbing. Cypress Cloud adds parallelization as a paid service. |
 | **[Playwright](https://github.com/microsoft/playwright)** | [![Stars](https://img.shields.io/github/stars/microsoft/playwright?style=social&color=white)](https://github.com/microsoft/playwright/stargazers) | Microsoft's cross-browser automation framework (Apache-2.0) with built-in test runner. CLI supports parallel execution, sharding, retries, and trace viewer. |
